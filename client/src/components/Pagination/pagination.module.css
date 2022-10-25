@@ -1,5 +1,5 @@
   .nav-pagination {
-    padding-top: 20px;
+    padding-top: 10px;
   }
   
   .pagination-container {
@@ -8,6 +8,7 @@
   }
 
   .blocks{
+    height: 35px;
     width: 40px;
     line-height: 40px;
     text-align: center;

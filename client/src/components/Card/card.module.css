@@ -11,6 +11,34 @@
     background-color: rgba(150, 89, 39, 0.76);
     box-shadow: 0px 2px 4px rgba(31, 31, 31, 0.2);
   }
+
+  .card-container:hover{
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: rgba(0, 0, 0, 0.63);
+  }
+
+  .card-container:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+  }
+
+  .card-container:hover:before {
+    transform: scale(2.15);
+  }
+
   
   .card-header {
     display: flex;
@@ -36,6 +64,7 @@
     margin-top: 12px;
     flex-direction: column;
     color:white;
+    text-shadow: 2px 2px black;
   }
 
   .card-temps{
@@ -43,6 +72,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-shadow: 2px 2px black;
   }
 
   .card-temps h5{
