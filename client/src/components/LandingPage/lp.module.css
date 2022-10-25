@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+}
+
+
+.container{
+    background-image: url(../Images/landing-dog.jpg);
+    height: 100vh;
+    background-size: 215vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.title{
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+    font-family: 'Rubik', monospace;
+    align-items: center;
+    padding: 15vh;
+    color: #8b5d1c;
+
+}
+
+.btn {
+    width: 140px;
+    height: 45px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+   }
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #3bd100;
+    z-index: -1;
+    transition: all 0.5s;
+   }
+   
+.btn:hover::before {
+    width: 100%;
+    border-radius: 5%;
+   }
+   
+.btn:hover {
+    color: #6d6875;
+    border-radius: 5%;
+
+   }
+   
+.btn:active:before {
+    background: #b9b9b9;
+    border-radius: 5%;
+   }
