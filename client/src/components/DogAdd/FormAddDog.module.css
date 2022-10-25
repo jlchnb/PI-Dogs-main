@@ -18,16 +18,16 @@
     padding: 0.2rem 0.1rem;
     transition: color 0.5s linear;
     z-index: 100;
-    border: 0.1rem solid #25b687;
-    outline: 0.1rem solid #25b687;
-    text-shadow: 0 0 3px #25b687;
-    background: #25b687;
+    border: 0.1rem solid #257cb6;
+    outline: 0.1rem solid #257cb6;
+    text-shadow: 0 0 3px #257cb6;
+    background: #257cb6;
     margin-bottom: 0.7rem;
 
     box-shadow: 5px 3px 5px 0.5px rgba(0,0,0,0.6);
 }
 
-.button_to_home:hover{ color: #25b687;  }
+.button_to_home:hover{ color: #257cb6;  }
 
 .button_to_home::before,
 .button_to_home::after{
@@ -57,7 +57,7 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid #25b687;
+    border: 2px solid #257cb6;
     background-color: rgba(255, 255, 255, 0.596);
     padding: 1rem 0;
     border-radius: 15px;
@@ -65,7 +65,7 @@ form{
 
 .form input{
     border: none;
-    border-bottom: 1px solid #25b687;
+    border-bottom: 1px solid #257cb6;
     height: 1.2rem;
     font-size: 1.1rem;
     outline: none;
@@ -111,7 +111,7 @@ form{
 .select_temperaments{
     cursor: pointer;
     font-size: 1rem;
-    background-color: #25b687;
+    background-color: #257cb6;
     border: none;
     border-radius: 15px;
     padding: 0.4rem;
@@ -135,7 +135,7 @@ form{
 
 .button_add_dog{
     font-size: 1rem;
-    background-color: #25b687;
+    background-color: #257cb6;
 }
 
 .button_add_dog{
@@ -147,7 +147,7 @@ form{
     max-height: 70px;
     border-radius: 10px;
     margin: 5px 0;
-    border: 2px solid #25b687;
+    border: 2px solid #257cb6;
     color: #575025;
     width: 100%;
     font-weight: bolder;

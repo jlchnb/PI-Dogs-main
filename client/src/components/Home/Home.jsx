@@ -64,9 +64,7 @@ export default function Home (){
                 <h2>Can't find the dog?
                 <Link to= '/dogs'> Click here to add</Link></h2>
                     <h1 className={h.title}>Doggos🐾</h1>
-                <button className={h['button-design']} onClick={e =>{handleClick(e)}}>
-                    Refresh
-                </button>
+                
             <div>
                 <div className={h['select-container']}>
                 <select className={h['select-box']} onChange={handleOrderByName}>
@@ -88,6 +86,9 @@ export default function Home (){
                     ))
                   }
                 </select>
+                <button className={h['button-design']} onClick={e =>{handleClick(e)}}>
+                    Refresh
+                </button>
                 </div>
                 <Pagination
                 dogsPerPage={dogsPerPage}

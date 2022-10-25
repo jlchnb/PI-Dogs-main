@@ -10,7 +10,8 @@
 
 .container{
     background-image: url(../Images/doggo.jpg);
-    height: 100vh;
+    height: 98vh;
+    width: 204vh;
     background-size: 215vh;
 }
 
@@ -72,5 +73,5 @@
 }
 
 .arriba{
-    background-color: rgba(255, 255, 255, 0.329);
+    background-color: rgba(255, 115, 0, 0.342);
 }
