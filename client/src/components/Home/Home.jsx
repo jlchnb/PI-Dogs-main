@@ -73,18 +73,12 @@ export default function Home (){
                     <option value= 'max_weight'>Max weight</option>
                 </select>
                 <select onChange={handleFilterTemp}>
-                  {/* <option disabled selected defaultValue>Temperaments</option> */}
                   <option value="Todos">All</option>
                   {
                     allTemperaments?.map(temp => (
                         <option value={temp.name} key={temp.id}>{temp.name}</option>
                     ))
                   }
-                </select>
-                <select>
-                    <option value='All'>All</option>
-                    <option value='created'>Created</option>
-                    <option value='api'>Existing</option>
                 </select>
                 <Pagination
                 dogsPerPage={dogsPerPage}
