@@ -14,7 +14,7 @@ export default function SearchBar() {
 
     function handleSubmit(e) {
         e.preventDefault(e)
-        if(name !== ''){
+        if(name !== '' && isNaN(name)){
             dispatch(getBreed(name));
             setname("")
         }else{
@@ -25,7 +25,7 @@ export default function SearchBar() {
     return(
         <div className={style.searchbar_container}>
             <input className={`${style.searchbar}`} type="text" onChange={handleInput} placeholder="Search..." value={name}/>
-            <button type="submit" onClick={handleSubmit}>
+            <button className={`${style.searchbar_button}`} type="submit" onClick={handleSubmit}>
                 Go
             </button>
         </div>

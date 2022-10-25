@@ -71,7 +71,7 @@ const middleDogIdGet = async(req,res) =>{
         res.status(404).send('No se encuentra ese perrito :c')
     }
   }catch(err){
-    console.log(err)
+    next(err)
   }
 }
 
