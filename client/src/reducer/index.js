@@ -94,9 +94,7 @@ function rootReducer (state = initialState,action){
                     allDogs: sortedWeight,
                 };
             case "SHOW_DOG_DETAILS":
-                console.log(action.payload,"action en reducer")
                 let myDetails = action.payload
-                console.log(myDetails)
                 if (!myDetails[0].temperaments[0]) {
                     myDetails[0].temperaments[0] = "no temperaments"
                 }

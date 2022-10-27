@@ -9,7 +9,7 @@ const middleDogGet = async (req,res) =>{
         let dogName = await totalDogs.filter(dog => dog.name.toLowerCase().includes(name.toLowerCase()))
         dogName.length ?
         res.status(200).send(dogName) :
-        res.status(404).send('No existe el perrito uwu');
+        res.status(404).send('That dog does not exist');
     }else{
         res.status(200).send(totalDogs)
     }
@@ -68,7 +68,7 @@ const middleDogIdGet = async(req,res) =>{
         let dogId = await totalDogs.filter(dog => dog.id == id)
         dogId.length?
         res.status(200).json(dogId):
-        res.status(404).send('No se encuentra ese perrito :c')
+        res.status(404).send('Dog not found')
     }
   }catch(err){
     next(err)

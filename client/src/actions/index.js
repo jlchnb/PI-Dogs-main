@@ -13,16 +13,19 @@ export function getDogs(){
 
 export function getTemperaments(){
     return async function(dispatch){
-        var json = await axios.get('http://localhost:3001/temperament',{});
-        return dispatch({
-            type: "GET_TEMPERAMENTS",
-            payload: json.data,
-        });
+        try{
+            var json = await axios.get('http://localhost:3001/temperament',{});
+            return dispatch({
+                type: "GET_TEMPERAMENTS",
+                payload: json.data,
+            });
+        }catch(error){
+            console.log(error);
+        }
     }
 };
 
 export function filterDogsByTemperament(payload){
-    console.log(payload)
     return{
         type: "FILTER_BY_TEMP",
         payload: payload
@@ -73,8 +76,13 @@ export function showDogDetails(id) {
 
 export function postDog(payload) {
     return async function () {
-        const data = await axios.post("http://localhost:3001/dogs", payload);
-        return data;
+        try{
+            const data = await axios.post("http://localhost:3001/dogs", payload);
+            return data;
+        }
+        catch(error){
+            console.log(error)
+        }
     }
 };
 

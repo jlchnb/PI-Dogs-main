@@ -62,7 +62,7 @@ export default function Home (){
             <div className={h['arriba']}>
                 <h2>Can't find the dog?
                 <Link to= '/dogs'> Click here to add</Link></h2>
-                    <h1 className={h.title}>Doggos🐾</h1>
+                    <h1 className={h.title}>Dog World🐾</h1>
                 
             <div>
                 <div className={h['select-container']}>
