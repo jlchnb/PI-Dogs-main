@@ -14,7 +14,6 @@ export default function Home (){
     const dispatch = useDispatch()
     const allDoggos = useSelector((state) => {return state.allDogs})
     const allTemperaments = useSelector(state => state.temperaments);
-    console.log(allTemperaments)
     // constantes para el paginado
     const [currentPage, setCurrentPage] = useState(1);
     const dogsPerPage = 8;
@@ -90,12 +89,12 @@ export default function Home (){
                     Refresh
                 </button>
                 </div>
+                <SearchBar/>
                 <Pagination
                 dogsPerPage={dogsPerPage}
                 allDoggos={allDoggos.length}
                 pagination={pagination}
                 />
-                <SearchBar/>
             </div>
             </div>
                 <div className={h['cards-container']}>

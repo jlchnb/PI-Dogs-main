@@ -22,6 +22,27 @@ const getApiInfo = async () => {
         if (!temperamentArray[0]) {
             temperamentArray[0] = "no-temperaments" //eliminamos arreglos vacios de temperamentos
           }
+        
+        if (isNaN(weightArray[0])){
+            weightArray[0] = weightArray[1]
+        }
+        if (isNaN(weightArray[1])){
+            weightArray[1] = weightArray[0]
+        }
+        if (isNaN(weightArray[0]) || isNaN(weightArray[1])){
+            weightArray[0] = "Weight not especified"
+            weightArray[1] = ""
+        }
+        if (isNaN(heightArray[0])){
+            heightArray[0] = heightArray[1]
+        }
+        if (isNaN(heightArray[1])){
+            heightArray[1] = heightArray[0]
+        }
+        if (isNaN(heightArray[0]) || isNaN(heightArray[1])){
+            heightArray[0] = "Height not especified"
+            heightArray[1] = ""
+        }
 
         return {
             id: dog.id,

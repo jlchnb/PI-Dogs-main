@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import LandingPage from './components/LandingPage/LandingPage';
 import Home from './components/Home/Home';
 import DetailedCard from './components/DetailedCard/DetailedCard';
-import FormAddDog from './components/DogAdd/FormAddDog';
+import AddDog from './components/DogAdd/AddDog';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <DetailedCard/>
         </Route>
         <Route exact path="/dogs">
-          <FormAddDog/>
+          <AddDog/>
         </Route>
       </Switch>
     </div>

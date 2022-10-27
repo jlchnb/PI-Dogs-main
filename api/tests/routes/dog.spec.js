@@ -20,5 +20,5 @@ describe('Videogame routes', () => {
     it('should get 200', () =>
       agent.get('/dogs').expect(200)
     );
-  });
+  }); 
 });

@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getTemperaments, postDog } from "../../actions/index";
-
-import style from "./../DogAdd/FormAddDog.module.css"
+import style from "./../DogAdd/AddDog.module.css"
 
 const validate = (form) => {
     let errors = {}
@@ -47,7 +46,7 @@ export default function FormAddDog() {
         max_weight: "",
         years:  "",
         img: "",
-        temperament: [],
+        temperaments: [],
     })
 
     useEffect(() => {
@@ -73,7 +72,7 @@ export default function FormAddDog() {
             max_weight: "",
             years: "",
             img: "",
-            temperament: []
+            temperaments: []
         });
     }
     
@@ -92,14 +91,15 @@ export default function FormAddDog() {
     const handleSelect = (e) => {
         setForm({
             ...form,
-            temperament: [...form.temperament, e.target.value]
+            temperaments: [...form.temperaments, e.target.value]
         })
+        console.log(form)
     }
 
     const handleDelete = (el) => {
         setForm({
             ...form,
-            temperament: form.temperament.filter(temp => temp !== el)
+            temperaments: form.temperaments.filter(temp => temp !== el)
         })
     }
 
@@ -113,7 +113,7 @@ export default function FormAddDog() {
                     <div className={style.name_container}>
                         <input className={style.input_name} type="text" value={form.name} name="name" onChange={(e) => handleChange(e)} placeholder="Name..."/>
                     </div>
-                    <div className={style.error_form}>{errors.name && <p>{errors.name}</p>}</div> {/*mesaje ed error de nombre*/}
+                    <div className={style.error_form}>{errors.name && <p>{errors.name}</p>}</div> 
 
                     <div className={style.height_container}>
                         <div className={style.min_height}>
@@ -124,7 +124,7 @@ export default function FormAddDog() {
                             <input type="text" value={form.max_height} name="max_height" placeholder="Max height..." onChange={(e) => handleChange(e)}/>
                         </div>
                     </div>
-                    <div className={style.error_form}>{errors.height && <p>{errors.height}</p>}</div>{/* espacio para agregar error */}{/* espacio para agregar error */}
+                    <div className={style.error_form}>{errors.height && <p>{errors.height}</p>}</div>
 
                     <div className={style.weight_container}>
                         <div className={style.min_weight}>
@@ -135,12 +135,12 @@ export default function FormAddDog() {
                             <input type="text" value={form.max_weight} name="max_weight" placeholder="Max weight..." onChange={(e) => handleChange(e)}/>
                         </div>
                     </div>
-                    <div className={style.error_form}>{errors.weight && <p>{errors.weight}</p>}</div>{/* espacio para agregar error */}
+                    <div className={style.error_form}>{errors.weight && <p>{errors.weight}</p>}</div>
 
                     <div className="life-span-container">
                         <input type="text" autoComplete="off" name="years" value={form.years} placeholder="lifespan exam: 10 - 12" onChange={(e) => handleChange(e)}/>
                     </div>
-                    <div className={style.error_form}>{errors.years && <p>{errors.years}</p>}</div>{/* espacio para agregar error */}
+                    <div className={style.error_form}>{errors.years && <p>{errors.years}</p>}</div>
 
                     <div className="img-container">
                         <input type="text" autoComplete="off" value={form.img} name="img" placeholder="img URL..." onChange={(e) => handleChange(e)}/>
@@ -154,7 +154,7 @@ export default function FormAddDog() {
                         <select className={style.select_temperaments} onChange={handleSelect}>
                             <option disabled selected>Temperaments</option>
                             {temperaments.map(d => (                    
-                                <option value={d.name} key={d.name+Math.random()} className={style.option_temperament}>{d.name}</option> //key de elementos de temperamentos, eliminar el repetido reserved
+                                <option value={d.name} key={d.name+Math.random()} className={style.option_temperament}>{d.name}</option>
                             ))}
                         </select>
                     </div>
@@ -172,7 +172,7 @@ export default function FormAddDog() {
                     </div>
 
                     <div className={style.container_temperaments}>
-                        {form.temperament.map(el => 
+                        {form.temperaments.map(el => 
                         <div className={style.element_temperament} key={el} onClick={() => handleDelete(el)}>
                             <p>{`${el}`}</p>
                         </div>    

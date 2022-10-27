@@ -47,8 +47,8 @@ try{
      img: img ? img : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dog_silhouette.svg/1034px-Dog_silhouette.svg.png",
     })
  
-    let associatedTemp = await Temperament.findAll({
-        where: { name: temperaments},
+    const associatedTemp = await Temperament.findAll({
+        where: {name:temperaments}
     })
  
     dog.addTemperament(associatedTemp);

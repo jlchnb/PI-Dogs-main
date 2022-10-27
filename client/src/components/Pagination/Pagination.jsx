@@ -14,8 +14,8 @@ export default function Pagination({ dogsPerPage, allDoggos, pagination }) {
             <ul className={PaginationStyles['pagination-container']}>
                 {pageNumbers &&
                     pageNumbers.map(number => (
-                        <li className={PaginationStyles['blocks']} key={number}>
-                            <button onClick={() => pagination(number)}>{number}</button>
+                        <li className={PaginationStyles['bullet']} key={number}>
+                            <button className={PaginationStyles['blocks']} onClick={() => pagination(number)}>{number}</button>
                         </li>
                     ))}
             </ul>

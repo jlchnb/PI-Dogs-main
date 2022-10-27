@@ -5,15 +5,17 @@
   .pagination-container {
     display: flex;
     justify-content: center;
+    list-style-type: none;
   }
-
   .blocks{
-    height: 35px;
-    width: 40px;
+    font-size: medium;
+    font-weight: 700;
+    height: 40px;
+    width: 38px;
     line-height: 40px;
     text-align: center;
     border: 1px solid #DDDDDD;
-    display: inline-block;
+    list-style-type: none;
     text-decoration: none;
     color: black;
     background-color: #f8f8f8;
