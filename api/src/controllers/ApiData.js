@@ -20,7 +20,7 @@ const getApiInfo = async () => {
             heightArray = dog.height.metric.split(" - ");
         }
         if (!temperamentArray[0]) {
-            temperamentArray[0] = "no-temperaments" //eliminamos arreglos vacios de temperamentos
+            temperamentArray[0] = "no-temperaments"
           }
         
         if (isNaN(weightArray[0])){

@@ -3,7 +3,6 @@ import axios from 'axios';
 // Se conecta el front con el back !
 export function getDogs(){
     return async function(dispatch){
-        //Por default me agrega el get junto al axios (axios.get)
         var json = await axios('http://localhost:3001/dogs',{});
         return dispatch({
             type: 'GET_DOGS',
@@ -30,11 +29,10 @@ export function filterDogsByTemperament(payload){
     }
 };
 
-export function getBreed(payload) {//dogs by name
-    return async function (dispatch) {//Dispatch que podemos usar gracias a la asincronia provista por el middleware thunk
+export function getBreed(payload) {
+    return async function (dispatch) {
         try {
             var json = await axios.get(`http://localhost:3001/dogs?name=${payload}`)
-            console.log(json)
             return dispatch ({
                 type: "GET_BREED",
                 payload: json.data
@@ -63,7 +61,6 @@ export function showDogDetails(id) {
     return async function (dispatch) {
         try {
             var json = await axios.get("http://localhost:3001/dogs/"+id, {});
-            console.log(json.data[0],"soy el res",id)
         return dispatch({
             type: "SHOW_DOG_DETAILS",
             payload: json.data
@@ -76,7 +73,7 @@ export function showDogDetails(id) {
 
 export function postDog(payload) {
     return async function () {
-        const data = await axios.post("http://localhost:3001/dogs", payload); //axios.post("http://localhost:3001/dog"
+        const data = await axios.post("http://localhost:3001/dogs", payload);
         return data;
     }
 };

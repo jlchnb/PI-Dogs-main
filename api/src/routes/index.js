@@ -6,16 +6,16 @@ const {middleTemp} = require('../routes/middlewares/temperaments')
 
 // Configurar los routers
 
-// Get /Characters
+// Get /Dogs
 router.get("/dogs", middleDogGet)
 
-// Get /episodes
+// Get /Temperament
 router.get("/temperament", middleTemp)
 
-// Post /Character
+// Post /Dogs
 router.post("/dogs",middleDogPost)
 
-// Get /Dog:id
+// Get /Dogs:id
 router.get("/dogs/:id",middleDogIdGet)
 
 module.exports = router;
